@@ -2,7 +2,7 @@
     "name": "clockworkmarketing/instiller-wrapper",
     "description": "Wrapper around the Instiller API",
     "type": "library",
-    "version": "0.1",
+    "version": "0.2",
     "license": "MIT",
     "authors": [
         {
@@ -13,6 +13,6 @@
     "autoload": {
         "psr-4": {
             "ClockworkMarketing\\InstillerWrapper\\": "src"
-        }
-    },
+
+    }
 }
