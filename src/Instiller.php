@@ -62,17 +62,27 @@ class Instiller
         ]);
 
         return $subscribed;
-
-
-
-
     }
 
+    public function triggerWorkflow($workflow_api_identifier, $email_address, $data=[], $workflow_session_variables=[])
+    {
 
+        $data = array_merge(
+            [
+                'workflow_api_identifier' => $workflow_api_identifier,
+                'email_address' => $email_address,
+                'workflow_session_variables' => json_encode($data),
+            ],
+            $data
+        );
 
+        $result = $this->request->post('/automation/trigger_workflow',$data);
+        if($results['valid'] == true)
+        {
+            return true;
+        }
 
-
-
-
+        return false;
+    }
 }
 
