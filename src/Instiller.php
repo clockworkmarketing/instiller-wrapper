@@ -46,14 +46,9 @@ class Instiller
         if(!is_object($this->user) || $this->user->email_address != $email_address)
         {
             $user = (object) $this->findOrCreateUser($email_address)->response;
-            dump(1);
         } else {
-            dump(2);
-
             $user = $this->user;
         }
-
-       // dd($user);
 
         $subscribed = $this->request->get('/users/list_subscribe', [
             'email_address' => $user->email_address,
@@ -71,12 +66,14 @@ class Instiller
             [
                 'workflow_api_identifier' => $workflow_api_identifier,
                 'email_address' => $email_address,
-                'workflow_session_variables' => json_encode($data),
+                'workflow_session_variables' => json_encode($workflow_session_variables),
             ],
             $data
         );
 
         $result = $this->request->post('/automation/trigger_workflow',$data);
+
+        return $result;
         if($results['valid'] == true)
         {
             return true;

@@ -11,7 +11,7 @@ class Request {
     public $api_endpoint;
 
 
-    public function __construct($api_id, $api_key, $end_point = 'https://control.instiller.co.uk/rest') {
+    public function __construct($api_id, $api_key, $end_point = 'https://app.emailmarketingbrilliance.co.uk/rest') {
 
         // Setup the public vars
         $this->api_id = $api_id;

@@ -2,7 +2,7 @@
     "name": "clockworkmarketing/instiller-wrapper",
     "description": "Wrapper around the Instiller API",
     "type": "library",
-    "version": "0.3",
+    "version": "1.0",
     "license": "MIT",
     "authors": [
         {
