@@ -20,6 +20,11 @@ class Instiller
         $this->request = new Request($api_id, $api_key);
     }
 
+    public function getAccountStatus()
+    {
+        return (object) $this->request->get('/account/status');
+    }
+
     public function findUser($email_address = null)
     {
         $this->user = $this->request->get('/users/details', [
