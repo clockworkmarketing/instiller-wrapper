@@ -26,7 +26,7 @@ class Request {
      * @param  Array  $options Array of fields and values.
      * @return Array           The results returned from the API.
      */
-    private function request($method, $request, $options) {
+    public function request($method, $request, $options) {
 
         // Initialise the cURL
         $curl = curl_init();
