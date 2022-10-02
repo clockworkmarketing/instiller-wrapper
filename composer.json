@@ -14,5 +14,17 @@
         "psr-4": {
             "ClockworkMarketing\\InstillerWrapper\\": "src"
         }
+    },
+    "requre": {
+        "php": "^8.0|^8.1"
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.22",
+        "pestphp/pest-plugin-mock": "^1.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     }
 }
